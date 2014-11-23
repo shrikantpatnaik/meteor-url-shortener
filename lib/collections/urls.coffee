@@ -3,19 +3,31 @@
 @Urls.allow
   update: ->
     true
+  remove: ->
+    Meteor.user()
 
 Meteor.methods
   urlInsert: (urlAttributes) =>
     check urlAttributes.url, String
     check urlAttributes.name, String if urlAttributes.name
 
+
     errors = validateUrl(urlAttributes)
-    throw new Meteor.Error("invalid-pos2t", "You must set a URL")  if errors.url
-    sameUrl = @Urls.findOne(url: urlAttributes.url)
-    if sameUrl
+    urlAttributes.name = urlAttributes.name || ""
+    throw new Meteor.Error("invalid-url", "You must set a URL")  if errors.url
+    exists = _.first @Urls.find(
+      $or : [
+        {
+          url: urlAttributes.url
+        },{
+          name: urlAttributes.name
+        }
+      ]).fetch()
+    if exists
       return {
-      urlExists: true
-      _id: sameUrl._id
+      urlExists: true if exists.url is urlAttributes.url
+      nameExists: true if exists.name is urlAttributes.name
+      _id: exists._id
       }
     url = _.extend urlAttributes,
       created: new Date()

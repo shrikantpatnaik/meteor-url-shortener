@@ -14,6 +14,11 @@ Router.route "/",
 Router.route "/admin/list",
   name: "urlList"
 
+Router.route "/admin/:_id",
+  name: "urlItem"
+  data: ->
+    Urls.findOne @params._id
+
 Router.route "/api/add",
   name:"apiAdd"
   action: ->
