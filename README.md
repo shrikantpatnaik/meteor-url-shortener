@@ -1,8 +1,10 @@
 # Meteor URL Shortener
 
-Your own URL shortener based on meteor. Deployed to heroku and ready to use in just a few minutes.
+Your own URL shortener built with [Meteor](http://meteor.com). Deployed and ready to use in just a few minutes.
 
-I used my own [boilerplate](http://c.5p.io/meteor-boilerplate) to get started, feel free to check it out and use it for your own apps.
+I used my own [boilerplate](http://c.5p.io/meteor-boilerplate) to get started, feel free to check it out and use it for your own Meteor apps.
+
+You can check out a demo [here](http://sp-url.meteor.com). This uses the default username and password of `admin`
 
 ## Basic Usage
 
