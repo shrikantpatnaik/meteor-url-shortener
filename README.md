@@ -10,7 +10,16 @@ Just clone and run `meteor`, the default username and password are both `admin`
 
 This app was built for deployment with [Heroku](http://heroku.com) but should work just fine on any other meteor capable setup.
 
-## Heroku Deployment instructions
+## Deployment instructions
+
+### Meteor.com
+* Clone the project using `git clone git@github.com:shrikantpatnaik/meteor-url-shortener.git`
+* Go into the directory you cloned
+      * `cd meteor-url-shortener`
+* Just deploy!
+    * `meteor deploy myapp.meteor.com`
+
+### Heroku
 
 Steps here are borrowed from [here](http://www.growthux.com/ux-html-css-js-growth-hack/installing-meteor-on-heroku)
 
@@ -33,6 +42,11 @@ Steps here are borrowed from [here](http://www.growthux.com/ux-html-css-js-growt
 * And Voila!! your app is ready at `appname.herokuapp.com`
 
 * I would recommend changing the password as soon you start using it!
+
+### Meteor Up
+
+* This can also be deployed to your own server using [Meteor Up](https://github.com/arunoda/meteor-up), just follow the instructions
+in the README and you should be good to go.
 
 ## License
 
