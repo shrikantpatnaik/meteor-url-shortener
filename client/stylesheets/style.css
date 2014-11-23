@@ -1,1 +1,78 @@
-/* CSS declarations go here */
+.grid-block, .main, .url, .comments li, .comment-form {
+  background: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
+
+body {
+  background: #eee;
+  color: #666666; }
+
+.navbar {
+  margin-bottom: 10px; }
+/* line 32, ../sass/style.scss */
+.navbar .navbar-inner {
+  -webkit-border-radius: 0px 0px 3px 3px;
+  -moz-border-radius: 0px 0px 3px 3px;
+  -ms-border-radius: 0px 0px 3px 3px;
+  -o-border-radius: 0px 0px 3px 3px;
+  border-radius: 0px 0px 3px 3px; }
+
+#spinner {
+  height: 300px; }
+
+.url {
+  /* For modern browsers */
+  /* For IE 6/7 (trigger hasLayout) */
+  *zoom: 1;
+  position: relative;
+  opacity: 1; }
+.url:before, .url:after {
+  content: "";
+  display: table; }
+.url:after {
+  clear: both; }
+.url.invisible {
+  opacity: 0; }
+.url.instant {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none; }
+.url.animate{
+  -webkit-transition: all 300ms 0ms;
+  -webkit-transition-delay: ease-in;
+  -moz-transition: all 300ms 0ms ease-in;
+  -o-transition: all 300ms 0ms ease-in;
+  transition: all 300ms 0ms ease-in; }
+.url .upvote {
+  display: block;
+  margin: 7px 12px 0 0;
+  float: left; }
+.url .url-content {
+  float: left; }
+.url .url-content h3 {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 18px; }
+.url .url-content h3 a {
+  display: inline-block;
+  margin-right: 5px; }
+.url .url-content h3 span {
+  font-weight: normal;
+  font-size: 14px;
+  display: inline-block;
+  color: #aaaaaa; }
+.url .url-content p {
+  margin: 0; }
+.url .discuss {
+  display: block;
+  float: right;
+  margin-top: 7px; }

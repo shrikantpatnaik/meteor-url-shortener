@@ -1,0 +1,11 @@
+<template name="urlItem">
+    <div class="url">
+        <div class="url-content">
+            <h3><a href="/{{name}}">{{name}}</a><span>{{url}}</span></h3>
+            <p>
+              Created on {{created}}
+              {{pluralize clicks "click"}}
+            </p>
+        </div>
+    </div>
+</template>
